@@ -1,0 +1,359 @@
+define(['dart_sdk', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/mac_app/widgets/settings_button.dart', 'packages/mac_app/widgets/drawer_main.dart', 'packages/provider/src/selector.dart', 'packages/mac_app/provider/quotes.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/mac_app/widgets/quote_widget.dart'], (function load__packages__mac_app__screens__favorites_screen_dart(dart_sdk, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__mac_app__widgets__settings_button$46dart, packages__mac_app__widgets__drawer_main$46dart, packages__provider__src__selector$46dart, packages__mac_app__provider__quotes$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__mac_app__widgets__quote_widget$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const settings_button = packages__mac_app__widgets__settings_button$46dart.widgets__settings_button;
+  const drawer_main = packages__mac_app__widgets__drawer_main$46dart.widgets__drawer_main;
+  const consumer = packages__provider__src__selector$46dart.src__consumer;
+  const quotes = packages__mac_app__provider__quotes$46dart.provider__quotes;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const quote_widget = packages__mac_app__widgets__quote_widget$46dart.widgets__quote_widget;
+  var favorites_screen = Object.create(dart.library);
+  var $isEmpty = dartx.isEmpty;
+  var $_get = dartx._get;
+  var $length = dartx.length;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    QuotesL: () => (T.QuotesL = dart.constFn(dart.legacy(quotes.Quotes)))(),
+    ConsumerOfQuotesL: () => (T.ConsumerOfQuotesL = dart.constFn(consumer.Consumer$(T.QuotesL())))(),
+    QuoteWidgetL: () => (T.QuoteWidgetL = dart.constFn(dart.legacy(quote_widget.QuoteWidget)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    BuildContextLAndintLToQuoteWidgetL: () => (T.BuildContextLAndintLToQuoteWidgetL = dart.constFn(dart.fnType(T.QuoteWidgetL(), [T.BuildContextL(), T.intL()])))(),
+    CenterL: () => (T.CenterL = dart.constFn(dart.legacy(basic.Center)))(),
+    BuildContextLAndQuotesLAndWidgetLToCenterL: () => (T.BuildContextLAndQuotesLAndWidgetLToCenterL = dart.constFn(dart.fnType(T.CenterL(), [T.BuildContextL(), T.QuotesL(), T.WidgetL()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 11,
+        [_Location_line]: 20,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 19,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/screens/favorites_screen.dart"
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 23,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/screens/favorites_screen.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 9,
+        [_Location_line]: 19,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "actions",
+        [_Location_column]: 9,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7, C[8] || CT.C8], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 18,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/screens/favorites_screen.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 26,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/screens/favorites_screen.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 19,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 19,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12, C[13] || CT.C13], T._LocationL());
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 30,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/screens/favorites_screen.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "quote",
+        [_Location_column]: 51,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "author",
+        [_Location_column]: 63,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 36,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/screens/favorites_screen.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemBuilder",
+        [_Location_column]: 19,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemCount",
+        [_Location_column]: 19,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 34,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/screens/favorites_screen.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24], T._LocationL());
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 45,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/screens/favorites_screen.dart"
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 9,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.constList([C[27] || CT.C27], T._LocationL());
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[26] || CT.C26,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 27,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/screens/favorites_screen.dart"
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 7,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "drawer",
+        [_Location_column]: 7,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.constList([C[30] || CT.C30, C[31] || CT.C31, C[32] || CT.C32], T._LocationL());
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[29] || CT.C29,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 17,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/screens/favorites_screen.dart"
+      });
+    }
+  }, false);
+  var C = Array(33).fill(void 0);
+  var I = ["package:mac_app/screens/favorites_screen.dart"];
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  favorites_screen.FavoritesScreen = class FavoritesScreen extends framework.StatelessWidget {
+    build(context) {
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: new text.Text.new("Favorites", {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), actions: T.JSArrayOfWidgetL().of([new settings_button.SettingsButton.new({$creationLocationd_0dea112b090073317d4: C[3] || CT.C3})]), $creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), drawer: new drawer_main.DrawerMain.new({$creationLocationd_0dea112b090073317d4: C[9] || CT.C9}), body: new (T.ConsumerOfQuotesL()).new({builder: dart.fn((context, quote, child) => new basic.Center.new({child: dart.test(quote.favoriteQuotes[$isEmpty]) ? new text.Text.new("No favorites added yet", {style: theme.Theme.of(context).textTheme.headline5, $creationLocationd_0dea112b090073317d4: C[10] || CT.C10}) : new scroll_view.ListView.builder({itemBuilder: dart.fn((context, index) => new quote_widget.QuoteWidget.new(quote.favoriteQuotes[$_get](index).quote, "-" + dart.str(quote.favoriteQuotes[$_get](index).author), {$creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), T.BuildContextLAndintLToQuoteWidgetL()), itemCount: quote.favoriteQuotes[$length], $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), $creationLocationd_0dea112b090073317d4: C[22] || CT.C22}), T.BuildContextLAndQuotesLAndWidgetLToCenterL()), $creationLocationd_0dea112b090073317d4: C[25] || CT.C25}), $creationLocationd_0dea112b090073317d4: C[28] || CT.C28});
+    }
+  };
+  (favorites_screen.FavoritesScreen.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    favorites_screen.FavoritesScreen.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = favorites_screen.FavoritesScreen.prototype;
+  dart.addTypeTests(favorites_screen.FavoritesScreen);
+  dart.addTypeCaches(favorites_screen.FavoritesScreen);
+  dart.setMethodSignature(favorites_screen.FavoritesScreen, () => ({
+    __proto__: dart.getMethods(favorites_screen.FavoritesScreen.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(favorites_screen.FavoritesScreen, I[0]);
+  dart.defineLazy(favorites_screen.FavoritesScreen, {
+    /*favorites_screen.FavoritesScreen.routeName*/get routeName() {
+      return "/favorites";
+    }
+  }, true);
+  dart.trackLibraries("packages/mac_app/screens/favorites_screen.dart", {
+    "package:mac_app/screens/favorites_screen.dart": favorites_screen
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["favorites_screen.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAe4B;AACxB,YAAO,oCACG,+BACC,kBACL,gFAEO,yBACP,oKAGI,+FACF,0CACK,SAAC,SAAS,OAAO,UAAU,uCAC3B,AAAM,AAAe,KAAhB,6BACN,kBACE,kCACa,AAAY,AAAU,eAAnB,OAAO,mFAEhB,+CACM,SAAC,SAAS,UACd,iCACL,AAAM,AAAc,AAAQ,KAAvB,uBAAgB,KAAK,SAC1B,AAAwC,eAApC,AAAM,AAAc,AAAQ,KAAvB,uBAAgB,KAAK,2HAGvB,AAAM,AAAe,KAAhB;IAKhC;;;QAnC2B;;AAAQ,oEAAW,GAAG;;EAAC;;;;;;;;;MAErC,0CAAS","file":"../../../../../../../../../../packages/mac_app/screens/favorites_screen.dart.lib.js"}');
+  // Exports:
+  return {
+    screens__favorites_screen: favorites_screen
+  };
+}));
+
+//# sourceMappingURL=favorites_screen.dart.lib.js.map

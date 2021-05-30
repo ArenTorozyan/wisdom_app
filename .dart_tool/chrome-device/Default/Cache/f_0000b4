@@ -1,0 +1,716 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/provider/src/selector.dart', 'packages/mac_app/provider/quotes.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/mac_app/widgets/quote_widget.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/material/colors.dart', 'packages/mac_app/widgets/actionButton.dart', 'packages/mac_app/widgets/gradientButton.dart'], (function load__packages__mac_app__widgets__quote_display_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__rendering__flex$46dart, packages__provider__src__selector$46dart, packages__mac_app__provider__quotes$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__mac_app__widgets__quote_widget$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__material__colors$46dart, packages__mac_app__widgets__actionButton$46dart, packages__mac_app__widgets__gradientButton$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const consumer = packages__provider__src__selector$46dart.src__consumer;
+  const quotes = packages__mac_app__provider__quotes$46dart.provider__quotes;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const quote_widget = packages__mac_app__widgets__quote_widget$46dart.widgets__quote_widget;
+  const icon_button = packages__flutter__src__material__icon_button$46dart.src__material__icon_button;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const actionButton = packages__mac_app__widgets__actionButton$46dart.widgets__actionButton;
+  const gradientButton = packages__mac_app__widgets__gradientButton$46dart.widgets__gradientButton;
+  var quote_display = Object.create(dart.library);
+  var $_get = dartx._get;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    QuotesL: () => (T.QuotesL = dart.constFn(dart.legacy(quotes.Quotes)))(),
+    ConsumerOfQuotesL: () => (T.ConsumerOfQuotesL = dart.constFn(consumer.Consumer$(T.QuotesL())))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    ContainerL: () => (T.ContainerL = dart.constFn(dart.legacy(container.Container)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    BuildContextLAndQuotesLAndWidgetLToContainerL: () => (T.BuildContextLAndQuotesLAndWidgetLToContainerL = dart.constFn(dart.fnType(T.ContainerL(), [T.BuildContextL(), T.QuotesL(), T.WidgetL()])))(),
+    RowL: () => (T.RowL = dart.constFn(dart.legacy(basic.Row)))(),
+    BuildContextLAndQuotesLAndWidgetLToRowL: () => (T.BuildContextLAndQuotesLAndWidgetLToRowL = dart.constFn(dart.fnType(T.RowL(), [T.BuildContextL(), T.QuotesL(), T.WidgetL()])))(),
+    GradientButtonL: () => (T.GradientButtonL = dart.constFn(dart.legacy(gradientButton.GradientButton)))(),
+    BuildContextLAndQuotesLAndWidgetLToGradientButtonL: () => (T.BuildContextLAndQuotesLAndWidgetLToGradientButtonL = dart.constFn(dart.fnType(T.GradientButtonL(), [T.BuildContextL(), T.QuotesL(), T.WidgetL()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "quote",
+        [_Location_column]: 47,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "author",
+        [_Location_column]: 59,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 33,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 27,
+        [_Location_line]: 50,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 31,
+        [_Location_line]: 48,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 25,
+        [_Location_line]: 48,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 25,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 31,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 31,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 25,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 25,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 25,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17, C[18] || CT.C18, C[19] || CT.C19], T._LocationL());
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 21,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 21,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.constList([C[22] || CT.C22, C[23] || CT.C23], T._LocationL());
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[21] || CT.C21,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 44,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 17,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.constList([C[26] || CT.C26], T._LocationL());
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[25] || CT.C25,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 38,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 15,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.constList([C[29] || CT.C29, C[30] || CT.C30], T._LocationL());
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[28] || CT.C28,
+        [_Location_name]: null,
+        [_Location_column]: 49,
+        [_Location_line]: 33,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 13,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.constList([C[33] || CT.C33], T._LocationL());
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[32] || CT.C32,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_action",
+        [_Location_column]: 27,
+        [_Location_line]: 78,
+        [_Location_file]: null
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_buttonText",
+        [_Location_column]: 21,
+        [_Location_line]: 79,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_backgroundColor",
+        [_Location_column]: 28,
+        [_Location_line]: 80,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_foregroundColor",
+        [_Location_column]: 28,
+        [_Location_line]: 81,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C[35] = dart.constList([C[36] || CT.C36, C[37] || CT.C37, C[38] || CT.C38, C[39] || CT.C39], T._LocationL());
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[35] || CT.C35,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 77,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 19,
+        [_Location_line]: 76,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 77,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.constList([C[42] || CT.C42, C[43] || CT.C43], T._LocationL());
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[41] || CT.C41,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 75,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_action",
+        [_Location_column]: 25,
+        [_Location_line]: 85,
+        [_Location_file]: null
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_buttonText",
+        [_Location_column]: 19,
+        [_Location_line]: 86,
+        [_Location_file]: null
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_backgroundColor",
+        [_Location_column]: 26,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_foregroundColor",
+        [_Location_column]: 26,
+        [_Location_line]: 88,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.constList([C[46] || CT.C46, C[47] || CT.C47, C[48] || CT.C48, C[49] || CT.C49], T._LocationL());
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[45] || CT.C45,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 84,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 15,
+        [_Location_line]: 73,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 15,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.constList([C[52] || CT.C52, C[53] || CT.C53], T._LocationL());
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[51] || CT.C51,
+        [_Location_name]: null,
+        [_Location_column]: 49,
+        [_Location_line]: 71,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 13,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C55() {
+      return C[55] = dart.constList([C[56] || CT.C56], T._LocationL());
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[55] || CT.C55,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 70,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_randomQuote",
+        [_Location_column]: 15,
+        [_Location_line]: 95,
+        [_Location_file]: null
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_buttonText",
+        [_Location_column]: 15,
+        [_Location_line]: 96,
+        [_Location_file]: null
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_gradientStart",
+        [_Location_column]: 22,
+        [_Location_line]: 97,
+        [_Location_file]: null
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_gradientEnd",
+        [_Location_column]: 22,
+        [_Location_line]: 98,
+        [_Location_file]: null
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "_colorText",
+        [_Location_column]: 22,
+        [_Location_line]: 99,
+        [_Location_file]: null
+      });
+    },
+    get C58() {
+      return C[58] = dart.constList([C[59] || CT.C59, C[60] || CT.C60, C[61] || CT.C61, C[62] || CT.C62, C[63] || CT.C63], T._LocationL());
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[58] || CT.C58,
+        [_Location_name]: null,
+        [_Location_column]: 49,
+        [_Location_line]: 94,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C66() {
+      return C[66] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 13,
+        [_Location_line]: 94,
+        [_Location_file]: null
+      });
+    },
+    get C65() {
+      return C[65] = dart.constList([C[66] || CT.C66], T._LocationL());
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[65] || CT.C65,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 93,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 9,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 9,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C71() {
+      return C[71] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C68() {
+      return C[68] = dart.constList([C[69] || CT.C69, C[70] || CT.C70, C[71] || CT.C71], T._LocationL());
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[68] || CT.C68,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C73() {
+      return C[73] = dart.constList([C[74] || CT.C74], T._LocationL());
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[73] || CT.C73,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 27,
+        [_Location_file]: "file:///C:/Users/Elizabeth/Desktop/Aren/dev/flutter/projects/mac_app/lib/widgets/quote_display.dart"
+      });
+    }
+  }, false);
+  var C = Array(75).fill(void 0);
+  var I = ["package:mac_app/widgets/quote_display.dart"];
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  quote_display.QuoteDisplay = class QuoteDisplay extends framework.StatelessWidget {
+    build(context) {
+      return new basic.Center.new({child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.end, crossAxisAlignment: flex.CrossAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new (T.ConsumerOfQuotesL()).new({builder: dart.fn((context, quote, child) => new container.Container.new({margin: new edge_insets.EdgeInsets.only({bottom: 210.0, top: 110.0}), child: new basic.Column.new({children: T.JSArrayOfWidgetL().of([new quote_widget.QuoteWidget.new(quote.quotes[$_get](quote.index).quote, "-" + dart.str(quote.quotes[$_get](quote.index).author), {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new icon_button.IconButton.new({icon: new icon.Icon.new(icons.Icons.share, {color: colors.Colors.white, $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), onPressed: dart.fn(() => {
+                          }, T.VoidToNull()), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), new icon_button.IconButton.new({icon: new icon.Icon.new(dart.test(quote.quotes[$_get](quote.index).isFavorite) ? icons.Icons.favorite : icons.Icons.favorite_border, {$creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), onPressed: dart.fn(() => quote.toggleFavoriteStatus(quote.quotes[$_get](quote.index).id), T.VoidTovoid()), color: theme.Theme.of(context).primaryColor, $creationLocationd_0dea112b090073317d4: C[15] || CT.C15})]), $creationLocationd_0dea112b090073317d4: C[20] || CT.C20})]), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24}), $creationLocationd_0dea112b090073317d4: C[27] || CT.C27}), T.BuildContextLAndQuotesLAndWidgetLToContainerL()), $creationLocationd_0dea112b090073317d4: C[31] || CT.C31}), new (T.ConsumerOfQuotesL()).new({builder: dart.fn((context, quote, child) => new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new container.Container.new({margin: new edge_insets.EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 0.0), child: new actionButton.ActionButton.new(dart.bind(quote, 'previousQuote'), "Prev", colors.Colors.blue, colors.Colors.white, {$creationLocationd_0dea112b090073317d4: C[34] || CT.C34}), $creationLocationd_0dea112b090073317d4: C[40] || CT.C40}), new actionButton.ActionButton.new(dart.bind(quote, 'nextQuote'), "Next", colors.Colors.red, colors.Colors.white, {$creationLocationd_0dea112b090073317d4: C[44] || CT.C44})]), $creationLocationd_0dea112b090073317d4: C[50] || CT.C50}), T.BuildContextLAndQuotesLAndWidgetLToRowL()), $creationLocationd_0dea112b090073317d4: C[54] || CT.C54}), new (T.ConsumerOfQuotesL()).new({builder: dart.fn((context, quote, child) => new gradientButton.GradientButton.new(null, "Random Quote", colors.Colors.blue, colors.Colors.red, colors.Colors.white, {$creationLocationd_0dea112b090073317d4: C[57] || CT.C57}), T.BuildContextLAndQuotesLAndWidgetLToGradientButtonL()), $creationLocationd_0dea112b090073317d4: C[64] || CT.C64})]), $creationLocationd_0dea112b090073317d4: C[67] || CT.C67}), $creationLocationd_0dea112b090073317d4: C[72] || CT.C72});
+    }
+  };
+  (quote_display.QuoteDisplay.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    quote_display.QuoteDisplay.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = quote_display.QuoteDisplay.prototype;
+  dart.addTypeTests(quote_display.QuoteDisplay);
+  dart.addTypeCaches(quote_display.QuoteDisplay);
+  dart.setMethodSignature(quote_display.QuoteDisplay, () => ({
+    __proto__: dart.getMethods(quote_display.QuoteDisplay.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(quote_display.QuoteDisplay, I[0]);
+  dart.trackLibraries("packages/mac_app/widgets/quote_display.dart", {
+    "package:mac_app/widgets/quote_display.dart": quote_display
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["quote_display.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAgB4B;AAUxB,YAAO,8BACE,yCACgC,gDACE,0CAC7B,yBACR,0CACW,SAAC,SAAS,OAAO,UAAU,qCACf,yCACT,YACH,gBAEA,gCACK,yBACR,iCACE,AAAM,AAAM,AAAc,KAArB,eAAQ,AAAM,KAAD,eAClB,AAAsC,eAAlC,AAAM,AAAM,AAAc,KAArB,eAAQ,AAAM,KAAD,2EAExB,sCACuC,yCAC3B,yBACR,sCACQ,kBACE,2BACQ,yFAEL;uGAEb,sCACQ,4BACJ,AAAM,AAAM,AAAc,KAArB,eAAQ,AAAM,KAAD,sBACN,uBACA,oGAEH,cAAM,AACZ,KADiB,sBACI,AAAM,AAAM,AAAc,KAArB,eAAQ,AAAM,KAAD,qCAC/B,AAAY,eAAT,OAAO,+WAQrC,0CACW,SAAC,SAAS,OAAO,UAAU,sCAEG,yCAC3B,yBACR,qCACqB,oCAAS,KAAG,KAAG,KAAG,aAC9B,kCACC,UAAN,KAAK,oBACL,QACO,oBACA,4IAGX,kCACQ,UAAN,KAAK,gBACL,QACO,mBACA,uPAKf,0CACW,SAAC,SAAS,OAAO,UAAU,sCAClC,MACA,gBACO,oBACA,mBACA;IAMnB;;;QA3FwB;;AAAQ,8DAAW,GAAG;;EAAC","file":"../../../../../../../../../../packages/mac_app/widgets/quote_display.dart.lib.js"}');
+  // Exports:
+  return {
+    widgets__quote_display: quote_display
+  };
+}));
+
+//# sourceMappingURL=quote_display.dart.lib.js.map
